@@ -11,6 +11,7 @@
         HeightRequest="200"
         Stroke="#E7E1EB"
         StrokeShape="RoundRectangle 20,20,20,20">
+        
             <Grid BackgroundColor="#E7E1EB" WidthRequest="370" HeightRequest="190" Padding="10">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -32,22 +33,30 @@
             </Grid>
     </Border>
 
-
-        <Grid>
+        <Border StrokeShape="RoundRectangle 25,25,25,25" Stroke="Black" HeightRequest="100" WidthRequest="380">
+            <Grid>
             <Grid.RowDefinitions>
-                <RowDefinition Height="200"/>
+                <RowDefinition Height="100"/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="100"/>
                 <ColumnDefinition Width="200"/>
                 <ColumnDefinition Width="100"/>
             </Grid.ColumnDefinitions>
-            <Border Stroke="#674FA3" WidthRequest="50" HeightRequest="50" StrokeShape="RoundRectangle 25,25,25,25"> 
-                
-                <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Text="A" FontSize="20" TextColor="#FFF" BackgroundColor="#674FA3" WidthRequest="60" HeightRequest="60"/>
-            </Border>
-        </Grid>
+                <Border Stroke="#674FA3" WidthRequest="60" HeightRequest="60" StrokeShape="RoundRectangle 30,30,30,30">
+                    <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Text="A" FontSize="30" TextColor="#FFF" BackgroundColor="#674FA3" WidthRequest="60" HeightRequest="60" Grid.Column="0" Grid.Row="0"/>
+                </Border>
+                <VerticalStackLayout Grid.Column="1" Grid.Row="0" VerticalOptions="Center">
+                    <Label FontAttributes="Bold" FontSize="20" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" Text="Header" />
+                    <Label FontAttributes="Bold" FontSize="15" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" Text="Subhead" />
+                </VerticalStackLayout>
+
+                <Label Text="Tu beda ksztalty" Grid.Column="2"/>
+
+            </Grid>
+        </Border>
         
         
+
     </VerticalStackLayout>
 </ContentPage>
