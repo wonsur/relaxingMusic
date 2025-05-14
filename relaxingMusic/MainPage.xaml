@@ -10,9 +10,10 @@
         WidthRequest="380"
         HeightRequest="200"
         Stroke="#E7E1EB"
-        StrokeShape="RoundRectangle 20,20,20,20">
+        StrokeShape="RoundRectangle 20,20,20,20"
+        Margin="0,20,0,50">
         
-            <Grid BackgroundColor="#E7E1EB" WidthRequest="370" HeightRequest="190" Padding="10">
+        <Grid BackgroundColor="#E7E1EB" WidthRequest="370" HeightRequest="190" Padding="10">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="40"/>
@@ -40,9 +41,9 @@
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="100"/>
-                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="180"/>
                 <ColumnDefinition Width="100"/>
-            </Grid.ColumnDefinitions>
+                </Grid.ColumnDefinitions>
                 <Border Stroke="#674FA3" WidthRequest="60" HeightRequest="60" StrokeShape="RoundRectangle 30,30,30,30">
                     <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Text="A" FontSize="30" TextColor="#FFF" BackgroundColor="#674FA3" WidthRequest="60" HeightRequest="60" Grid.Column="0" Grid.Row="0"/>
                 </Border>
@@ -51,12 +52,75 @@
                     <Label FontAttributes="Bold" FontSize="15" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" Text="Subhead" />
                 </VerticalStackLayout>
 
-                <Label Text="Tu beda ksztalty" Grid.Column="2"/>
+                <Image Source="ksztalty.png" Grid.Column="2" Grid.Row="0" WidthRequest="100" HeightRequest="100"/>
+
 
             </Grid>
         </Border>
-        
-        
+
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="160"/>
+                <RowDefinition Height="160"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="270" />
+                <ColumnDefinition Width="130" />
+            </Grid.ColumnDefinitions>
+
+            <Border BackgroundColor="#E9DEFE" Grid.Column="0" Grid.Row="0" Grid.RowSpan="2" Margin="20,50,20,50" StrokeShape="RoundRectangle 25,25,25,25" Stroke="#E9DEFE">
+
+                <Grid Padding="10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="50" />
+                        <RowDefinition Height="50" />
+                        <RowDefinition Height="50" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="190" />
+                    </Grid.ColumnDefinitions>
+
+                    <Label Text="  Title list" FontSize="20" FontAttributes="Bold" Grid.Column="0" Grid.Row="0"/>
+                    <Label Text="+" TextColor="#665396" FontSize="25" FontAttributes="Bold" Grid.Column="0" Grid.Row="0" HorizontalTextAlignment="End"/>
+                    <HorizontalStackLayout Grid.Row="1">
+                        <CheckBox VerticalOptions="Center"/>
+                        <Label Text="Item 1" VerticalOptions="Center" FontAttributes="Bold" TextDecorations="Strikethrough"/>
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout Grid.Row="2">
+                        <CheckBox />
+                        <Label Text="Item 2" VerticalOptions="Center" FontAttributes="Bold" TextDecorations="Strikethrough"/>
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout  Grid.Row="3">
+                        <CheckBox />
+                        <Label Text="Item 3" VerticalOptions="Center" FontAttributes="Bold"/>
+                    </HorizontalStackLayout>
+                    
+
+                </Grid>                
+    
+            </Border>
+
+            <Border BackgroundColor="#E9DEFE" Grid.Column="1" Grid.Row="0" Margin="5,50,5,0" StrokeShape="RoundRectangle 25,25,25,25" Stroke="#E9DEFE">
+                <Image Source="olulek.png"  WidthRequest="70" />
+            </Border>
+
+            <VerticalStackLayout Grid.Column="1" Grid.Row="2" HorizontalOptions="Center" Margin="5,15,0,20">
+                <HorizontalStackLayout>
+                    <CheckBox />
+                    <RadioButton />
+                </HorizontalStackLayout>
+                <HorizontalStackLayout>
+                    <CheckBox />
+                    <RadioButton />
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+            
+            
+        </Grid>
+
+        <Slider />
 
     </VerticalStackLayout>
 </ContentPage>
